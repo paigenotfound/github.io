@@ -166,6 +166,19 @@ hr
 .kours img 
 {
 	margin: 10px 0;
+	overflow:hidden;
+	
+	-moz-transition: all 3s ease-out;
+	-o-transition: all 3s ease-out;
+	-webkit-transition: all 3s ease-out;
+}
+
+.kours img:hover
+{
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+-o-transform: scale(1.05);
+
 }
 
 
@@ -250,6 +263,95 @@ h3
 }
 
 }
+
+
+/*КАЛЬКУЛЯТОР*/
+*{
+			margin-left:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		button{
+			outline:0;
+			cursor: pointer;
+		}
+		.popup{
+			display: none;
+			position: fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			z-index: 100;
+			background-color: rgba(0,0,0,0.3);
+			overflow:auto;
+		}
+		.popup-inner{
+			width: 100%;
+			max-width: 400px;
+			margin:100px auto;
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow:0 0 10px rgba(0,0,0,0.1);
+			padding:20px;
+		}
+		.popup--open{
+			display: block;
+		}
+		.close-popup{
+		    display: block;
+		    margin: -38px auto 0 auto;
+		    border: 0;
+		    background-color: #000;
+		    line-height: 30px;
+		    width: 30px;
+		    color: #fff;
+		    border-radius: 50%;
+		}
+		.check-discount{
+			width: 100%;
+			border-radius: 4px;
+			background-color: blue;
+			color:#fff;;
+			text-align: center;
+			border:0;
+			line-height: 30px;
+		}
+		.form-group{
+			display: block;
+			margin-bottom: 15px;
+		}
+		.label{
+			font-weight: 600;
+			font-size: 16px;
+			margin-bottom: 5px;
+			display: block;
+		}
+		.form-group input[type="number"]{
+			border-radius: 4px;
+			line-height: 30px;
+			width: 100%;
+			text-indent: 15px;
+			border:1px solid #363636;
+		}
+		.form-group select{
+			display: inline-block;
+			background-color:#fff;
+			height:30px;
+		}
+		.show-popup{
+			color:blue;
+			display: inline-block;
+			padding: 5px 10px;
+			border:1px solid blue;
+			cursor: pointer;
+		}
+		.total{
+			display: block;
+		}
+		.warning, .discount-show{
+			color:red;
+		}
 
 
 @media only screen and (max-width: 720px)
