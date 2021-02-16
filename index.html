@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 
+
+  <script src="js/script.js"></script>
+
     <title>Fitness Pride</title>
   </head>
 
@@ -36,10 +39,7 @@
           <a class="nav-link" href="#3">Правила обучения</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT</a>
+          <a class="nav-link" href="#4">Стоимость обучения</a>
         </li>
       </ul>
     </div>
@@ -153,8 +153,62 @@
       <hr>
     <h3>Рассчет стоимости обучения</h3>
       <hr>
+        <div class="calculator">
+    <div class="form-group">
+      <select class="select" name="type">
+        <option value="0">Выбрать</option>
+        <option value="1000">Абонемент на 14 дней</option>
+        <option value="2000">Абонемент на 14 дней с тренером</option>
+        <option value="1500">Безлимитный абонемент</option>
+        <option value="3000">Безлимит с тренером</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <span class="label">Дополнительные услуги</span>
+      <label><input type="checkbox" name="dop" value="450"> <span class="check-text">Занятия в кардио зале</span></label>
+      <label><input type="checkbox" name="dop" value="550"> <span class="check-text">Занятия в бассейне</span></label>
+      <label><input type="checkbox" name="dop" value="1000"> <span class="check-text">Кроссфит</span></label>
+    </div>
+
+    <div class="discount">
+      <span class="show-popup" data-type="student-discount">Получить скидку студента (-5%)</span>
+      <span class="show-popup" data-type="regular-discount">Скидка по карте постоянного клиента (-10%)</span>
+    </div>
+
+    <span class="total">Итого: <b class="total-price">0</b><b>р.</b><i class="discount-show"></i></span>
+     </div>
+
+  <div class="popup student-discount-wrap">
+    <div class="popup-inner">
+      <button class="close-popup">x</button>
+      <span class="warning"></span>
+      <p>Для того чтоб получить скидку студента, необходимо указать номер студенческого.</p>
+      <div class="form-group">
+        <label for="st-number" class="label">Номер студенческого</label>
+        <input type="number" name="st-number" value="" id="st-number">
+      </div>
+      <button class="check-discount" data-discount="student">Получить скидку</button>
+    </div>
+  </div>
+
+  <div class="popup regular-discount-wrap">
+    <div class="popup-inner">
+      <button class="close-popup">x</button>
+      <span class="warning"></span>
+      <p>Для того чтоб получить скидку постоянного клиента, необходимо указать номер карточки постоянного клиента.</p>
+      <div class="form-group">
+        <label for="kn-number" class="label">Номер карточки</label>
+        <input type="number" name="kn-number" value="" id="kn-number">
+      </div>
+      <button class="check-discount" data-discount="regular">Получить скидку</button>
+    </div>
+  </div>
     </div>
     </section>
+
+
+
 
     <footer id="6">
       <div class="container-fluid footer">
@@ -173,9 +227,7 @@
             <a href=""><img src="img/4.png" alt=""></a>
          </div> 
 
-        </div>
-
-
+</div>
 
       </div>
     </footer>
